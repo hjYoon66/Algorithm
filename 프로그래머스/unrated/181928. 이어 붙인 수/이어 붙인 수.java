@@ -4,11 +4,11 @@ class Solution {
         String oddList = "";
         String evenList = "";
         
-        for(int i = 0; i<num_list.length;i++){
-           if(num_list[i]%2 == 1) 
-               oddList += String.valueOf(num_list[i]);
+        for(int list : num_list){
+            if(list%2 == 1)
+                oddList += ""+list;
             else
-                evenList += String.valueOf(num_list[i]);
+                evenList += ""+list;  
         }
         answer = Integer.parseInt(oddList)+ Integer.parseInt(evenList);
         return answer;
