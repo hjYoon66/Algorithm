@@ -7,7 +7,7 @@ class Solution {
             String str = ""+i;
             int count = 0;
             for(int j= 0;j< str.length();j++){
-                if(str.charAt(j)==48 || str.charAt(j)==53)
+                if(str.charAt(j)=='0' || str.charAt(j)=='5')
                     count++;
             }
             if(count == str.length())
