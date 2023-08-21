@@ -9,7 +9,7 @@ class Solution {
             StringBuilder s = new StringBuilder(sb.substring(start, end+1));
             s.reverse();
             sb.replace(start, end+1, s.toString());
-            answer = String.valueOf(sb);
+            answer = sb.toString();
         }
         return answer;
     }
