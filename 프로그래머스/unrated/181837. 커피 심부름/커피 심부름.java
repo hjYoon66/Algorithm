@@ -1,17 +1,12 @@
 class Solution {
     public int solution(String[] order) {
         int answer = 0;
-        int americano = 4500;
-        int latte = 5000;
+        
         for(String s : order){
-            switch(s){
-                case "iceamericano","americanoice","hotamericano","americanohot","americano","anything":
-                    answer+=americano;
-                    break;
-                case "icecafelatte","cafelatteice","hotcafelatte","cafelattehot","cafelatte":
-                    answer += latte;
-                    break;
-            }
+            if(s.contains("americano")|| s.contains("anything"))
+                answer += 4500;
+            else if(s.contains("cafelatte"))
+                answer += 5000;
         }
         return answer;
     }
