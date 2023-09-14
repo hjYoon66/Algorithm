@@ -1,8 +1,6 @@
-import java.util.*;
 class Solution {
     public int[] solution(int[] num_list) {
         int[] answer = new int[2];
-        List<Integer> list = new ArrayList<>();
         int odd = 0;
         int even = 0;
         for(int num : num_list){
@@ -11,9 +9,8 @@ class Solution {
             else
                 odd++;
         }
-        list.add(even);
-        list.add(odd);
-        answer=list.stream().mapToInt(i->i).toArray();
+        answer[0]=even;
+        answer[1]=odd;
         return answer;
     }
 }
